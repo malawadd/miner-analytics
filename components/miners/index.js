@@ -6,6 +6,7 @@ import { useQuery } from "react-query";
 import moment from "moment";
 import LoaderComp from "../LoaderComp";
 import VolumeChart from "./VolumeChart";
+import LiquidityChart from "./LiquidityChart";
 
 
 
@@ -59,6 +60,8 @@ export default function MinersOverview() {
       <Flex justifyContent="space-evenly">
         <SimpleGrid cols={2} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
             <VolumeChart prices={prices} />
+            <LiquidityChart marketCap={marketCap} />
+
 
         </SimpleGrid>
       </Flex>
