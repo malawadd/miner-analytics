@@ -16,6 +16,7 @@ import {
   import { IconChevronDown } from "@tabler/icons";
   import Link from "next/link";
   import Logo from "../Logo";
+  import ChainStatus from "../ChainStatus";
 
   const useStyles = createStyles((theme) => ({
     link: {
@@ -119,6 +120,10 @@ import {
               
             </Group>
             <Logo />
+            <Group className={classes.hiddenMobile}>
+              <ChainStatus />
+              <Logo />
+            </Group>
             
 
             <Burger
