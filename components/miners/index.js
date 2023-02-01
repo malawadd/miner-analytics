@@ -7,7 +7,7 @@ import moment from "moment";
 import LoaderComp from "../LoaderComp";
 import VolumeChart from "./VolumeChart";
 import LiquidityChart from "./LiquidityChart";
-
+import Stats from "./Stats";
 
 
 export default function MinersOverview() {
@@ -61,10 +61,10 @@ export default function MinersOverview() {
         <SimpleGrid cols={2} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
             <VolumeChart prices={prices} />
             <LiquidityChart marketCap={marketCap} />
-
-
         </SimpleGrid>
       </Flex>
+      <Stats />
+
     </>
   );
 }
