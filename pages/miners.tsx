@@ -2,7 +2,8 @@ import Head from "next/head";
 import { AppShell } from "@mantine/core";
 import {
     HeaderNavbar,
-    Footer
+    Footer,
+    SideNavbarMiners
   } from "../components";
 
 
@@ -16,6 +17,7 @@ export default function MinersPage() {
       </Head>
 
       <AppShell
+      navbar={<SideNavbarMiners />}
         header={<HeaderNavbar />}
         footer={<Footer links={[]} />}
         styles={(theme) => ({
