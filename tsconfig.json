@@ -13,12 +13,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "incremental": true
+   
+    },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx" ,
+    "components/HeaderNavbar/index.tsx",
+    "pages/index.js"],
   "exclude": ["node_modules"]
 }

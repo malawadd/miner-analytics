@@ -1,5 +1,8 @@
 import Head from "next/head";
 import { AppShell } from "@mantine/core";
+import {
+    HeaderNavbar,
+  } from "../components";
 
 
 export default function MinersPage() {
@@ -12,7 +15,7 @@ export default function MinersPage() {
       </Head>
 
       <AppShell
-
+        header={<HeaderNavbar />}
         styles={(theme) => ({
           main: {
             backgroundColor:
