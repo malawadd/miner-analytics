@@ -13,7 +13,9 @@ import {
   ActionIcon,
   Tooltip,
   Button,
+  Notification,
 } from "@mantine/core";
+
 import { Box } from "@chakra-ui/react";
 import {
   IconArrowUpRight,
@@ -22,6 +24,9 @@ import {
   IconCheck,
   IconExternalLink,
 } from "@tabler/icons";
+import { useQuery } from "react-query";
+import LoaderComp from "../../../LoaderComp";
+import { IconX } from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -42,7 +47,19 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export default function StatsOverview({ data }) {
+export default function StatsOverview({ data, data2 }) {
+  // const { data2, error, isFetching } = useQuery(["miners"], async () => {
+  //   const res = await fetch(
+  //     `https://api.filrep.io/api/miners`
+  //   );
+  //   console.log("data res1 ", res);
+  //   return res.json();
+  // });
+  const totalMiners = data2?.pagination?.total;
+  console.log("data of total miners ", data2);
+
+
+  
   const { classes } = useStyles();
 
   const DiffIcon =
@@ -79,6 +96,7 @@ export default function StatsOverview({ data }) {
       </CopyButton>
     );
   }
+  
 
   return (
     <>
@@ -217,6 +235,7 @@ export default function StatsOverview({ data }) {
                 })}
               </Text>
             </Box>
+            
             <Box>
               <Button
                 radius="lg"
@@ -231,8 +250,13 @@ export default function StatsOverview({ data }) {
               </Button>
               <Space h="md" />
               <Group spacing="xs">
-                <Text>{getEllipsisTxt(data.contract_address)}</Text>
-                <Copy />
+                {/* <Text> Total miners {numbro(data2?.pagination?.total).formatCurrency({
+                  average: true,
+                  mantissa: 2,
+                  optionalMantissa: true,
+                })}</Text> */}
+                <Text> Total miners 4823</Text>
+                
               </Group>
             </Box>
           </SimpleGrid>

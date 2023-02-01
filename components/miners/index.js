@@ -8,6 +8,7 @@ import LoaderComp from "../LoaderComp";
 import VolumeChart from "./VolumeChart";
 import LiquidityChart from "./LiquidityChart";
 import Stats from "./Stats";
+import MinersPool from "./MinersPool";
 
 
 export default function MinersOverview() {
@@ -64,6 +65,7 @@ export default function MinersOverview() {
         </SimpleGrid>
       </Flex>
       <Stats />
+      <MinersPool />
 
     </>
   );

@@ -14,7 +14,16 @@ export default function Stats() {
     return res.json();
   });
 
-  //console.log(data);
+  const { data2} = useQuery(["miners"], async () => {
+    const res2 = await fetch(
+      `https://api.filrep.io/api/miners`
+    );
+    console.log("data res1 ", res2);
+    return res2.json();
+  });
+
+
+  console.log("data2",data2);
 
   if (isFetching)
     return (
@@ -39,7 +48,7 @@ export default function Stats() {
     );
   return (
     <>
-      <StatsOverview data={data} />
+      <StatsOverview data={data} data2={data2} />
     </>
   );
 }
