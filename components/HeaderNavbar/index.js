@@ -17,6 +17,7 @@ import {
   import Link from "next/link";
   import Logo from "../Logo";
   import ChainStatus from "../ChainStatus";
+  import ColorModeButton from "../ColorModeButton";
 
   const useStyles = createStyles((theme) => ({
     link: {
@@ -122,7 +123,7 @@ import {
             <Logo />
             <Group className={classes.hiddenMobile}>
               <ChainStatus />
-              <Logo />
+              <ColorModeButton />
             </Group>
             
 
