@@ -5,6 +5,7 @@ import { IconX } from "@tabler/icons";
 import { useQuery } from "react-query";
 import moment from "moment";
 import LoaderComp from "../LoaderComp";
+import VolumeChart from "./VolumeChart";
 
 
 
@@ -57,6 +58,7 @@ export default function MinersOverview() {
       </Text>
       <Flex justifyContent="space-evenly">
         <SimpleGrid cols={2} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
+            <VolumeChart prices={prices} />
 
         </SimpleGrid>
       </Flex>
