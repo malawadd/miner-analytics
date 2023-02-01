@@ -15,6 +15,7 @@ import {
   import { useDisclosure } from "@mantine/hooks";
   import { IconChevronDown } from "@tabler/icons";
   import Link from "next/link";
+  import Logo from "../Logo";
 
   const useStyles = createStyles((theme) => ({
     link: {
@@ -86,9 +87,48 @@ import {
   }));
 
   export default function HeaderNavbar() {
+    const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
+    useDisclosure(false);
+    const { classes, theme } = useStyles();
     return (
         <>
-        <dev>im header</dev>
+        <Box pb={0.5}>
+        <Header height={75} px="md">
+        <Group position="apart" sx={{ height: "100%" }}>
+            <Group
+              sx={{ height: "100%" }}
+              spacing={5}
+              className={classes.hiddenMobile}
+            >
+              <Link
+                href="/miners"
+                style={{ color: "inherit", textDecoration: "inherit" }}
+              >
+                <Button variant="subtle" color="white" radius="md" h={50}>
+                  <Avatar
+                    variant="outline"
+                    radius="xl"
+                    mx={3}
+                    color="white"
+                    alt="diffusion"
+                    src="https://assets.coingecko.com/coins/images/12817/small/filecoin.png?1602753933"
+                  />
+                  miners
+                </Button>
+              </Link>
+              
+            </Group>
+            <Logo />
+            
+
+            <Burger
+              opened={drawerOpened}
+              onClick={toggleDrawer}
+              className={classes.hiddenDesktop}
+            />
+          </Group>
+            </Header>
+        </Box>
         </>
     )
 
