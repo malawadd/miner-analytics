@@ -3,7 +3,8 @@ import { AppShell } from "@mantine/core";
 import {
     HeaderNavbar,
     Footer,
-    SideNavbarMiners
+    SideNavbarMiners,
+    Miners
   } from "../components";
 
 
@@ -29,6 +30,7 @@ export default function MinersPage() {
           },
         })}
       >
+        <Miners />
       </AppShell>
     </>
   );
