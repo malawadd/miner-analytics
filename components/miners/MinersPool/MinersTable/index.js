@@ -141,7 +141,7 @@ export default function MinersTable({data}) {
           <Text>
             <Text
               color={
-                numbro(index.dataStored).format({
+                numbro(index.storageDeals.dataStored).format({
                   mantissa: 2,
                   average: true,
                   output: "byte",
@@ -149,10 +149,10 @@ export default function MinersTable({data}) {
                   spaceSeparated: true,
                 }) > 0
                   ? "teal"
-                  : "red"
+                  : "green"
               }
             >
-              {numbro(index.dataStored).format({
+              {numbro(index.storageDeals.dataStored).format({
                   mantissa: 2,
                   average: true,
                   output: "byte",
@@ -236,7 +236,7 @@ export default function MinersTable({data}) {
                   </th>
                   <th>
                     <Text c="dimmed" fw={700} tt="uppercase">
-                      1y Fees/Liquidity
+                      Data Stored
                     </Text>
                   </th>
                 </tr>
