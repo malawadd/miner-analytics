@@ -123,16 +123,20 @@ export default function MinersTable({data}) {
                 })}
       </td>
       <td>
-        {numbro(index.rank)
-        }
+        {numbro(index.rank).format({
+              mantissa: 2,
+            })}
+        
       </td>
       <td>
         {(index.reachability)}
       </td>
       <td>
-        {/* {numbro(index.storageDeals.total)} */}
+        {numbro(index.storageDeals.total).format({
+              mantissa: 2,
+            })}
       </td>
-      {/* <td>
+      <td>
         <Group spacing="2xs">
           <Text>
             <Text
@@ -179,7 +183,7 @@ export default function MinersTable({data}) {
             <DiffIcon size={28} stroke={1.5} />
           </ThemeIcon>
         </Group>
-      </td> */}
+      </td>
     </tr>
   ));
 
@@ -225,7 +229,7 @@ export default function MinersTable({data}) {
                     reachability
                     </Text>
                   </th>
-                  {/* <th>
+                  <th>
                     <Text c="dimmed" fw={700} tt="uppercase">
                       storage deals total
                     </Text>
@@ -234,11 +238,46 @@ export default function MinersTable({data}) {
                     <Text c="dimmed" fw={700} tt="uppercase">
                       1y Fees/Liquidity
                     </Text>
-                  </th> */}
+                  </th>
                 </tr>
               </thead>
-              {/* <tbody> {rows}
-              </tbody> */}
+              <tbody> {rows}
+              </tbody>
+                {/* <tbody> 
+                <tr>
+                <td>f01662887</td>
+                <td> {numbro(34359738368).format({
+              mantissa: 2,
+              average: true,
+              output: "byte",
+              base: "binary",
+              spaceSeparated: true,
+            })} </td>
+            <td>{numbro(1).format({
+              mantissa: 2,
+            })}</td>
+            </tr> */}
+
+              
+              {/* <td> f01662887 </td>
+              <td> {numbro(34359738368).format({
+              mantissa: 2,
+              average: true,
+              output: "byte",
+              base: "binary",
+              spaceSeparated: true,
+            })} </td>
+            <td>{numbro(1)}</td>
+            <td>reachable</td>
+            <td>1251</td>
+            <td>500000000</td> */}
+
+          
+            {/*  */}
+
+          
+
+            
             </Table>
           </ScrollArea>
         </Paper>
