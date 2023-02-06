@@ -56,7 +56,7 @@ export default function StatsOverview({ data, data2 }) {
   //   return res.json();
   // });
   const totalMiners = data2?.pagination?.total;
-  console.log("data of total miners ", data2);
+  // console.log("data of total miners ", data2);
 
 
   

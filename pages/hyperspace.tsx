@@ -12,7 +12,7 @@ export default function MinersPage() {
   return (
     <>
       <Head>
-        <title>Storage Providers Analytics - MinerAnalytics</title>
+        <title>Storage Providers Analytics - fvem Portal</title>
         <meta name="description" content="Storage providers Analytics" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -30,7 +30,7 @@ export default function MinersPage() {
           },
         })}
       >
-        <Miners />
+        
       </AppShell>
     </>
   );

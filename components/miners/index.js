@@ -20,7 +20,7 @@ export default function MinersOverview() {
     return res.json();
   });
 
-  console.log("data is ", data);
+//   console.log("data is ", data);
 
   // Chart data for filecoin market_caps
   const marketCap = data?.market_caps.map((item) => ({

@@ -77,7 +77,7 @@ export default function SideNavbarMiners() {
 
             <Tooltip label="Analytics" position="right" transitionDuration={0}>
               <Link
-                href="/Miners"
+                href="/mainnet"
                 style={{ color: "inherit", textDecoration: "inherit" }}
               >
                 <Button

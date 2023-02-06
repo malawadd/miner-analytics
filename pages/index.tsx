@@ -81,17 +81,17 @@ export default function Home() {
   return (
     <>
       <Head>
-      <title>MinerAnalytics - Fvm storage providers Dashboard</title>
+      <title>fvem Portal - Fvm storage providers Dashboard</title>
           <meta name="description" content="Fvm storage providers Dashboard" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/logo.png" />
       </Head>
       <Container h="100hv" className={classes.inner}>
       <Center>
-        <Box my={20}>
+        <Box my={1}>
           <Link href="">
             <Image
-              pb={2}
-              src="/favicon.ico"
+              pb={10}
+              src="/logo.png"
               alt="gigiblock-logo"
               width="100%"
               height="100%"
@@ -101,27 +101,28 @@ export default function Home() {
       </Center>
 
       <h1 className={classes.title}>
-        A{" "}
+        An{" "}
         <Text
           component="span"
           variant="gradient"
           gradient={{ from: "#cc518f", to: "#4122ff" }}
           inherit
         >
-          Miners Visual Analytics
-        </Text>{" "}
-        <Center>dashboard site</Center>
+          Analytics & guides
+        </Text>{" "} site
+        {/* <Center> site</Center> */}
       </h1>
 
       <Text className={classes.description} color="dimmed">
         Providing a visual analytics front-end with detailed data about the storage 
-        providers on the Filecoin network.
+        providers on the Filecoin network, in additon to guides to help builders get started with 
+        the FEVM network.
       </Text>
 
       <Center>
         <Group className={classes.controls}>
           <Link
-            href="/miners"
+            href="/mainnet"
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
             <Button radius="md" size="md" variant="default">

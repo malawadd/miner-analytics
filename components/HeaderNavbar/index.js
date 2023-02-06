@@ -103,7 +103,7 @@ import {
               className={classes.hiddenMobile}
             >
               <Link
-                href="/miners"
+                href="/mainnet"
                 style={{ color: "inherit", textDecoration: "inherit" }}
               >
                 <Button variant="subtle" color="white" radius="md" h={50}>
@@ -112,10 +112,44 @@ import {
                     radius="xl"
                     mx={3}
                     color="white"
-                    alt="diffusion"
+                    alt="filecoin"
                     src="https://assets.coingecko.com/coins/images/12817/small/filecoin.png?1602753933"
                   />
-                  miners
+                  MainNet
+                </Button>
+              </Link>
+
+              <Link
+                href="/hyperspace"
+                style={{ color: "inherit", textDecoration: "inherit" }}
+              >
+                <Button variant="subtle" color="white" radius="md" h={50}>
+                  <Avatar
+                    variant="outline"
+                    radius="xl"
+                    mx={3}
+                    color="white"
+                    alt="filecoin"
+                    src="https://assets.coingecko.com/coins/images/12817/small/filecoin.png?1602753933"
+                  />
+                  Hyperspace
+                </Button>
+              </Link>
+
+              <Link
+                href="/guides"
+                style={{ color: "inherit", textDecoration: "inherit" }}
+              >
+                <Button variant="subtle" color="white" radius="md" h={50}>
+                  <Avatar
+                    variant="outline"
+                    radius="xl"
+                    mx={3}
+                    color="white"
+                    alt="filecoin"
+                    src="https://assets.coingecko.com/coins/images/12817/small/filecoin.png?1602753933"
+                  />
+                  Guides
                 </Button>
               </Link>
               
@@ -153,8 +187,8 @@ import {
             <Link component="a" href="/" className={classes.link}>
               Home
             </Link>
-            <Link component="a" href="/miners" className={classes.link}>
-              miners
+            <Link component="a" href="/mainnet" className={classes.link}>
+              MainNet
             </Link>
             <Divider
               my="sm"

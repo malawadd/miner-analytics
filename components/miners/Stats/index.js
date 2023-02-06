@@ -18,12 +18,12 @@ export default function Stats() {
     const res2 = await fetch(
       `https://api.filrep.io/api/miners`
     );
-    console.log("data res1 ", res2);
+    // console.log("data res1 ", res2);
     return res2.json();
   });
 
 
-  console.log("data2",data2);
+  // console.log("data2",data2);
 
   if (isFetching)
     return (
